@@ -1,0 +1,153 @@
+{% extends 'bases/post_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+
+{% endblock %}
+
+{% block tag1 %}
+Make Money Online
+{% endblock %}
+
+{% block tag2 %}
+Make Money From Home
+{% endblock %}
+
+{% block tag3 %}
+
+{% endblock %}
+
+{% block more_articles %}
+    <div class="card mb-4">
+        <div class="card-header"><h5>You may like some of our other betting tips</h5></div>
+        <div class="card-body">
+            <div class="row">
+
+                    <ul class="list-unstyled mb-0">
+                        {% for article in article_list %}
+                        <li><a href={{ article.url }}>{{ article.name }}</a></li>
+
+                        {% endfor %}
+                    </ul>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+{% block ads %}
+{% for ad in ad_list %}
+<div class="card mb-4">
+    <div class="card-header"> <h5>{{ ad.name }}</h5></div>
+    <div class="card-body">{{ ad.description }} </div>
+    <div class="card-body"> <a class="btn btn-primary" href={{ ad.url }}>Get →</a></div>
+</div>
+{% endfor %}
+
+{% for promo in promotion %}
+<div class="card mb-4">
+    <div class="card-header"><h5> {{ promo.name }}</h5></div>
+    <div class="card-body">{{ promo.description }} </div>
+   <div class="card-body"> <a class="btn btn-primary" href="landing-page">Get Free Guide →</a></div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block image %}
+<figure class="mb-4"><img class="img-fluid rounded" src='{% static "blog/assets/computer.jpg" %}' alt="..." /></figure>
+
+{% endblock %}
+
+{% block article %}
+    <p class="fs-5 mb-4">Under/over betting entails predicting more or less than a certain number of points
+        scored in a game. For example, if we place a bet on under 2.5 goals then we are predicting that 2 or
+        fewer goals will be scored in total by the end of the game. The overs/unders market is one of the
+        more tricky ones to master but can be very lucrative if you can identify high-value bets.
+        <br><br>
+        In this article, we cover using an over/unders 2.5 betting strettegy that can be used to bet on
+        football matches.
+</p>
+
+<!--    <br/>-->
+
+    <h2 class="fw-bolder mb-4 mt-5">Check the data </h2>
+
+    <p class="fs-5 mb-4"><a href="https://www.infogol.net/en/matches/today">Infogol</a> is a great website to get the probabilities of different football game
+        outcomes from. From their home page navigate to the matches page. From here you will see all the
+        games that they have statistics on sorted by league and date
+</p>
+
+    <centre >
+        <figure class="mb-4" ><img class="img-fluid rounded" src='{% static "blog/assets/ou1.png" %}' alt="..." /></figure>
+
+    </centre>
+
+<br>
+        <p class="fs-5 mb-4">Once there we can click to see more information on any given game and more
+            importantly the under overs probabilities.
+        </p>
+
+    <centre>
+        <figure class="mb-4"><img class="img-fluid rounded" src='{% static "blog/assets/ou2.png" %}' alt="..." /></figure>
+
+    </centre>
+    <br>
+        <p class="fs-5 mb-4"> The top bar shows the probabilities based on data gathered by infogol and the
+            bottom bars show values based on bets being placed on betting exchanges. A good idea is look for
+            the more likely outcome which in this is case is over 2.5 goals.
+        </p>
+
+        <p class="fs-5 mb-4"> Now that we know that  over 2.5 goals is the most likely outcome we can use the
+            probability to calculate the value of this bet. Which probability source do we use though? Infogol
+            or the betting exchanges? Well you can decide which source you trust more or you could take the
+            average between the two. In this example the average is (59 + 68)/2 = 63.5%.
+
+        </p>
+
+        <p class="fs-5 mb-4"> It’s good practice to have a threshold probability value. This means that you
+            don’t place bets on outcomes that have a probability value of less than this threshold. A
+            threshold value we like to use at Wisebet is 60%.  The probability value that we calculated is
+            above our threshold so this so far is an acceptable bet. The next step is to verify if  this bet
+            has value.
+        </p>
+
+    <h2 class="fw-bolder mb-4 mt-5">Determining value</h2>
+
+    <p class="fs-5 mb-4">Before we place any bets we first need to see if there is value in this bet. To do this
+        we will make use of the following simple formula.
+    </p>
+  <h5> <i>value = 100/probability</i></h5>
+<br>
+
+<p class="fs-5 mb-4">For over 2.5 goals with a probability of 63.5% we can calculate the value of this bet
+    as follows.
+    <br><br>
+Value = 100/63.5 = 1.57.
+<p class="fs-5 mb-4">This means that the corresponding bet should have odds of at least 1.57 for it to be a
+    value bet. We have
+    found that the less popular leagues such as the Turkish super league or Portuguese primeira liga tend to
+    have more value bets than very popular leagues such as the English premier league.
+</p>
+<p class="fs-5 mb-4">
+You should place as many value bets as you can find as this will increase you chances of making profit.
+Don’t forget to practice good risk management when betting or else you will definitely make a loss.
+</p>
+
+
+
+    <h2 class="fw-bolder mb-4 mt-5">Risk Management</h2>
+    <p class="fs-5 mb-4">Risk Management is extremely important if you don't want to lose all your money
+        ,and it takes quite a bit of discipline. Let's say you've decided that its time
+    to start making some money on sports betting. You open an account and deposit $50.
+        You've managed to find a decent looking value bet but how much do you bet on it? $10? Well lets say you decide
+    to bet $10. It only takes 5 bad bets and boom... your account is wiped out.</p>
+    <p class="fs-5 mb-4">A general rule of thumb is to never bet more than 5% of what is in your account.
+    This of course is not the only to way profit so depending on your strategy this can vary.It is however important
+        to have a strategy that you stick to. A bad strategy is still better than no strategy. </p>
+
+{% endblock %}
+
+<h1>hello mommy</h1>

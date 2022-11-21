@@ -1,0 +1,125 @@
+{% extends 'bases/post_base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block tag1 %}
+Make Money Online
+{% endblock %}
+
+{% block tag2 %}
+Make Money From Home
+{% endblock %}
+
+{% block tag3 %}
+
+{% endblock %}
+
+{% block more_articles %}
+    <div class="card mb-4">
+        <div class="card-header"><h5>You may like some of our other betting tips</h5></div>
+        <div class="card-body">
+            <div class="row">
+
+                    <ul class="list-unstyled mb-0">
+                        {% for article in article_list %}
+                        <li><a href={{ article.url }}>{{ article.name }}</a></li>
+
+                        {% endfor %}
+                    </ul>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block ads %}
+{% for ad in ad_list %}
+<div class="card mb-4">
+    <div class="card-header"> <h5>{{ ad.name }}</h5></div>
+    <div class="card-body">{{ ad.description }} </div>
+    <div class="card-body"> <a class="btn btn-primary" href={{ ad.url }}>Get →</a></div>
+</div>
+{% endfor %}
+
+{% for promo in promotion %}
+<div class="card mb-4">
+    <div class="card-header"><h5> {{ promo.name }}</h5></div>
+    <div class="card-body">{{ promo.description }} </div>
+   <div class="card-body"> <a class="btn btn-primary" href="landing-page">Get Free Guide →</a></div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block image %}
+<figure class="mb-4"><img class="img-fluid rounded" src='{% static "blog/assets/money_field.jpg" %}' alt="..." /></figure>
+
+{% endblock %}
+
+{% block article %}
+    <p class="fs-5 mb-4">If you’re a sports lover, you probably look forward to the new season with great
+        enthusiasm. If you also love money, you might want to consider betting on your favorite team.It's a great way to make money
+        online from home. But
+        how do you make money from betting on sports?
+        You probably already know that there are different types of bets in sports betting. The trick lies
+        in knowing which bets hold the most value so that in the long run you can bank in a profit.</p>
+
+<!--    <br/>-->
+
+    <h2 class="fw-bolder mb-4 mt-5">How Does Sports Betting Work?</h2>
+
+    <p class="fs-5 mb-4">Before we go into how you can make money from sports betting, it’s important to
+        discuss what sports betting actually is. Sports betting is the act of predicting the outcome of
+        a sports event (e.g. a football match) and placing a wager on your prediction. The sports bettor
+        will place this bet with a sportsbook, who will then set the odds based on how likely they think
+        the outcome is.</p>
+        <p class="fs-5 mb-4">For example if Chelsea are playing a premier league match against Fullham
+        and the bookies think there is a high chance of Chelsea winning then they will place low odds on the
+        bet like 1.25(sometimes expressed as a fraction 5/4). A $10 bet on Chelsea could potentially stand to get $12.50 return($2.50 proffit).
+        Since Fullham are expected to lose the game the odds for a Fullham win will be much higher, along the lines of
+        3.5(or 7/2), which means a $10 bet would get you a $35 return.
+        <p class="fs-5 mb-4"> Sports betting is a
+        huge industry. The global sports betting market is worth around $500 billion every year. It’s
+        estimated that there are around 1.79 billion sports bettors worldwide. With a half decent strategy and
+        a statistics backed approach of identifying value bets, you'll find that there are plenty of opportunities
+        to make money with sports betting
+        </p>
+
+
+    <h2 class="fw-bolder mb-4 mt-5">How To Identify the Best Value Bets</h2>
+
+    <p class="fs-5 mb-4">When you begin to bet on sports, you’ll want to make sure that you’re getting good value
+        on your bets. But what does this even mean? let us explain. To start with lets take a look at the following
+        formulas. </p>
+    <p>probability = 100/odds</p>
+    <p>value = 100/probability</p>
+
+<p class="fs-5 mb-4">To explain we will use the previous example. Lets say we have done our research and find that
+Chelsea have a 70% chance of winning the game against Fullham. using the above formulas we see that this bet has a
+a value of 1.43 . This means that if we want to bet on Chelsea winning then the odds should be at least 1.43 for the bet to be worth it.
+In our example the odds were only 1.2 which means that this is not a value bet and we should not place a bet.
+<h5>How do we know the probability of a certain outcome?</h5>
+<p class="fs-5 mb-4">There are a few good resources online to get the likelihood of different outcomes. <a href="https://footystats.org/">footystats</a> and
+    <a href="https://www.infogol.net/en">infogol</a> are two good sources for soccer stats and  <a href="https://www.nba.com/stats">Official NBA Stats</a> has reliable statistics
+for NBA. Similar sites exist for just about every major sport out there.  </p>
+
+
+    <h2 class="fw-bolder mb-4 mt-5">Risk Management</h2>
+    <p class="fs-5 mb-4">Risk Management is extremely important if you don't want to lose all your money
+        ,and it takes quite a bit of discipline. Let's say you've decided that its time
+    to start making some money on sports betting. You open an account and deposit $50.
+        You've managed to find a decent looking value bet but how much do you bet on it? $10? Well lets say you decide
+    to bet $10. It only takes 5 bad bets and boom... your account is wiped out.</p>
+    <p class="fs-5 mb-4">A general rule of thumb is to never bet more than 5% of what is in your account.
+    This of course is not the only to way profit so depending on your strategy this can vary.It is however important
+        to have a strategy that you stick to. A bad strategy is still better than no strategy. </p>
+
+    <p class="fs-5 mb-4">Remember that you are bound to lose some bets. It is important that you stick to a strategy
+    even after losing a bet. Another quick way to lose your money is to chase lost bets by places wager on bets outside
+    of your strategy</p>
+
+{% endblock %}
+
+<h1>hello mommy</h1>
